@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_function</title>
+</head>
+
+<body>
+    <script>
+
+        function result(num, y) {
+            arr = num.toString().split(""); //['4','2','8','7']
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (Number(arr[i]) + Number(arr[j]) === y) {
+                        return console.log(i, j);
+                    }
+
+                }
+            }
+        };
+        result(1234, 3);
+
+
+        //邏輯紀錄的部分--------------------------------------
+        // const str = '4827';
+        // const arr = str.split("");
+        // //console.log(arr)
+
+        // let i = '';
+        // let j = '';
+        // function result(i, j) {
+        //     if (i < arr.length, j < arr.length) {
+        //         y = Number(arr[i]) + Number(arr[j])
+        //         k = [i, j]
+        //     }
+
+        // } console.log(result(0, 2)); //這一行為什麼會有undefined??
+        // console.log(k, y);
+
+
+    </script>
+</body>
+
+</html>

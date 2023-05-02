@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_select</title>
+</head>
+
+<body>
+    <select name="" id="Cityname"></select>
+    <select name="" id="Areaname"></select>
+
+
+    <script src="../01_select/address.js"></script>
+    <script>
+        console.log(ad);
+        const CN = document.querySelector('#Cityname')
+        const AN = document.querySelector('#Areaname')
+        let datas = "";
+        let i = ""
+
+        ad.forEach(item => {
+            datas += `<option>${item.CityName}</option>`
+        });
+
+        ad.forEach(item => {
+            item.AreaList.forEach((ele) => {
+                i += `<option>${ele.AreaName}</option>`
+            });
+        });
+
+        //console.log(datas);
+        //console.log(i);
+        CN.innerHTML = datas;
+        AN.innerHTML = i;
+
+
+    </script>
+</body>
+
+</html>
